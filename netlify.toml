@@ -1,15 +1,30 @@
 [build]
+  command = "npm run build"
   publish = "dist"
 
-# 1. Redirige cualquier imagen buscada en /eAConsultaWeb/images/ hacia /images/
+# 1. Cuando pida /eAConsultaWeb/jcaptcha (con o sin ?t=...), entrega cap_sample.jpg
+[[redirects]]
+  from = "/eAConsultaWeb/jcaptcha"
+  to = "/images/cap_sample.jpg"
+  status = 200
+  force = true
+
+# 2. Redirige cualquier imagen que busque en /eAConsultaWeb/images/ hacia /images/
 [[redirects]]
   from = "/eAConsultaWeb/images/*"
   to = "/images/:splat"
   status = 200
+  force = true
 
-# 2. Redirige el captcha hacia una imagen fija dentro de tu carpeta /images/
-# (Cambia "captcha.png" por el nombre real de la imagen que tengas en /images)
+# 3. Redirige los CSS si también tienen el prefijo /eAConsultaWeb/css/
 [[redirects]]
-  from = "/eAConsultaWeb/jcaptcha*"
-  to = "/images/captcha.png"
+  from = "/eAConsultaWeb/css/*"
+  to = "/css/:splat"
+  status = 200
+  force = true
+
+# 4. Regla para que las rutas de React/Vite no den 404 al recargar
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200
