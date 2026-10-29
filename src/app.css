@@ -1,0 +1,715 @@
+/* ------------------------------------------------------------------ */
+/*  Ajustes de fidelidad con la sede electrónica de la CARM            */
+/* ------------------------------------------------------------------ */
+
+html {
+  padding-bottom: 0;
+}
+
+body {
+  font-size: 13px;
+  background: #ffffff;
+}
+
+body.fuenteGrande {
+  font-size: 15px;
+}
+
+body.fuenteMuyGrande {
+  font-size: 17px;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Cabecera ------------------------------------------------------ */
+
+.cabeceraTabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cabeceraTabla td {
+  padding: 0;
+  vertical-align: bottom;
+}
+
+.cabeceraLogo img {
+  display: block;
+  width: 300px;
+  height: 67px;
+  border: 0;
+}
+
+.cabeceraDerecha {
+  width: 450px;
+  text-align: right;
+}
+
+.cabeceraDerecha img {
+  display: block;
+  margin-left: auto;
+  border: 0;
+}
+
+.barraTitulo {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  background: #e7e5e5 url('/eAConsultaWeb/resources/images/header2.jpg') no-repeat top right;
+}
+
+.lineaNegra {
+  height: 2px;
+  background: #000000;
+  font-size: 0;
+  line-height: 0;
+}
+
+.lineaBisel {
+  height: 5px;
+  background: linear-gradient(
+    to bottom,
+    #b4b4b4 0,
+    #b4b4b4 1px,
+    #c6c6c6 1px,
+    #dedede 2px,
+    #f0f0f0 3px,
+    #fbfbfb 4px,
+    #f4f4f4 5px
+  );
+  font-size: 0;
+  line-height: 0;
+}
+
+.barraTitulo td {
+  padding: 0;
+}
+
+.barraTitulo .celdaTitulo {
+  height: 30px;
+  background: transparent;
+  padding-left: 20px;
+  padding-top: 1px;
+  font-weight: bold;
+  font-size: 9px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  border-top: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding-left: 18px;
+}
+
+.barraTitulo .celdaHerramientas {
+  width: 310px;
+  height: 30px;
+  background: transparent;
+  background-image: none;
+  text-align: right;
+  vertical-align: middle;
+  padding-right: 6px;
+}
+
+.barraTitulo .celdaHerramientas table {
+  border-collapse: collapse;
+  margin-left: auto;
+}
+
+.barraTitulo .celdaHerramientas td {
+  vertical-align: middle;
+}
+
+.barraTitulo .celdaHerramientas img {
+  width: 20px;
+  height: 17px;
+  border: 0;
+  margin: 0 1px;
+  cursor: pointer;
+}
+
+.iconoHerramienta {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.separadorIconos {
+  width: 8px;
+}
+
+#cabeceraTitulo table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#cabeceraTitulo td {
+  height: 12px;
+  background-color: #e7e5e5;
+  background-image: url('/eAConsultaWeb/resources/images/bgheader4.gif');
+  background-repeat: repeat-x;
+  background-position: top left;
+  color: #787878;
+  font-weight: bold;
+  font-size: 130%;
+  padding-left: 20px;
+  padding-top: 2px;
+  vertical-align: top;
+  line-height: 1px;
+}
+
+/* --- Pestañas ------------------------------------------------------ */
+
+.barraPestanas {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+
+.tablaVerificacion {
+  margin: 34px auto 0 auto;
+  width: 660px;
+  max-width: 94%;
+}
+
+.barraPestanas td {
+  padding: 0;
+  vertical-align: bottom;
+}
+
+.pestanas {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 8px;
+  display: flex;
+  gap: 3px;
+  border-bottom: 1px solid #8d8d8d;
+}
+
+.pestanas li {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  font-size: 11px;
+}
+
+.pestanas button {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #4a4a4a;
+  background: #dedcdc;
+  border: 1px solid #8d8d8d;
+  border-bottom: none;
+  padding: 4px 12px 4px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.pestanas button:hover {
+  background: #efeeee;
+}
+
+.pestanas li.activa button {
+  background: #ffffff;
+  color: #000000;
+  border-top: 2px solid #c00040;
+  padding-top: 5px;
+  position: relative;
+  top: 1px;
+}
+
+/* --- Contenido ----------------------------------------------------- */
+
+#contenidoPrincipal {
+  flex: 1 0 auto;
+  padding: 34px 0 28px 0;
+  background: #ffffff;
+}
+
+.tituloPasos {
+  font-size: 12px;
+  font-weight: bold;
+  color: #c00040;
+  margin-bottom: 2px;
+}
+
+.envolturaCaptcha {
+  width: 90%;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.bloqueCaptcha {
+  margin-top: 14px;
+}
+
+.bloqueCaptcha .imagenSeguridad {
+  border: 1px solid #d8d8d8;
+  display: block;
+  margin: 6px 0 10px 0;
+  background: #ededed;
+}
+
+.campoCaracteres {
+  width: 190px;
+  font-size: 120%;
+  background: transparent;
+  border-color: #8d8d8d;
+  padding: 1px 2px;
+}
+
+.campoCaracteres:focus {
+  outline: none;
+  border-bottom-color: #c00040;
+}
+
+.etiquetaCampo {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.botonContinuar {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 110%;
+  color: #000000;
+  background-color: #e8e8e8;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px outset #716f64;
+  border-bottom: 1px outset #716f64;
+  padding: 1px 8px;
+  cursor: pointer;
+}
+
+.botonContinuar:active {
+  border-top: 1px inset #716f64;
+  border-left: 1px inset #716f64;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.mensajeErrorCaptcha {
+  color: #c00040;
+  font-weight: bold;
+  font-size: 100%;
+  margin: 8px 0 4px 0;
+  min-height: 14px;
+}
+
+/* --- Documento verificado ------------------------------------------ */
+
+.documentoVerificado {
+  width: 660px;
+  max-width: 94%;
+  margin: 22px auto 0 auto;
+}
+
+.datosDocumento {
+  font-size: 11px;
+  margin: 8px 0 12px 0;
+}
+
+.accionesDocumento {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.botonEnlace {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 16px;
+}
+
+.nombreDocumento {
+  font-size: 10px;
+  color: #666666;
+}
+
+.marcoDocumento {
+  border: 1px solid #999999;
+  background: #f4f4f4;
+  padding: 2px;
+}
+
+.marcoDocumento iframe {
+  display: block;
+  width: 100%;
+  height: 560px;
+  border: 0;
+  background: #ffffff;
+}
+
+.cargandoDocumento {
+  font-size: 11px;
+  margin: 10px 0;
+}
+
+/* --- Verificación -------------------------------------------------- */
+
+.verificacion {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.verificacion > tbody > tr > td {
+  vertical-align: top;
+  padding: 0;
+}
+
+.columnaDocumento {
+  width: 168px;
+  text-align: center;
+}
+
+.columnaDocumento img {
+  width: 168px;
+  border: 1px solid #d7d7d7;
+  display: block;
+  margin: 0 auto;
+}
+
+.columnaDerecha {
+  width: 186px;
+  text-align: center;
+}
+
+.columnaDerecha img {
+  width: 186px;
+  border: 1px solid #d7d7d7;
+  display: block;
+  margin: 0 auto;
+}
+
+.columnaCentral {
+  padding: 0 22px !important;
+  font-size: 1em;
+  width: 300px;
+}
+
+.textoExplicativo {
+  color: #404040;
+  line-height: 1.45;
+  margin: 0 0 22px 0;
+  max-width: 330px;
+}
+
+.etiquetaVerificacion {
+  display: block;
+  margin-bottom: 8px;
+  color: #404040;
+}
+
+.campoVerificacion {
+  width: 240px;
+  font-size: 1em;
+  border: 0;
+  border-bottom: 1px solid #8d8d8d;
+  padding: 1px 2px;
+}
+
+.campoVerificacion:focus {
+  outline: none;
+  border-bottom-color: #c00040;
+}
+
+.botonConsultar {
+  margin-top: 14px;
+}
+
+.lineaBoton {
+  margin-top: 16px;
+}
+
+.guias {
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.guiaBarCode {
+  border: 2px solid #d40000;
+  padding: 6px 8px 4px 8px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.guiaGuid {
+  border: 2px solid #d40000;
+  padding: 4px 4px 0 4px;
+  background: #ffffff;
+  line-height: 0;
+}
+
+.bloqueQr {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.guiaQr {
+  border: 2px solid #d40000;
+  padding: 6px;
+  background: #ffffff;
+  line-height: 0;
+  flex-shrink: 0;
+}
+
+.guiaBarCode .rotulo {
+  font-size: 90%;
+  color: #404040;
+  margin-bottom: 3px;
+}
+
+.codigoBarras {
+  width: 232px;
+  height: 52px;
+  background-image: url('/eAConsultaWeb/resources/images/codigo-barras.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.numeroDocumento {
+  font-size: 90%;
+  color: #404040;
+  letter-spacing: 0.5px;
+  margin-top: 3px;
+}
+
+.guiaGuid {
+  border: 2px solid #d40000;
+  padding: 4px;
+  background: #ffffff;
+  line-height: 0;
+  margin-top: 4px;
+}
+
+.guiaGuid img {
+  width: 16px;
+  height: 92px;
+  border: 0;
+}
+
+.guiaQr {
+  border: 2px solid #d40000;
+  padding: 6px;
+  background: #ffffff;
+  line-height: 0;
+}
+
+.guiaQr img {
+  width: 74px;
+  height: 74px;
+  border: 0;
+}
+
+.pieGuia {
+  font-size: 90%;
+  color: #404040;
+  margin-top: 6px;
+  max-width: 300px;
+  line-height: 1.35;
+}
+
+/* --- Resultados ---------------------------------------------------- */
+
+.resultados {
+  padding: 0 20px 20px 20px;
+}
+
+.tituloResultados {
+  font-weight: bold;
+  color: #c00040;
+  font-size: 110%;
+  margin-bottom: 14px;
+}
+
+.rejillaDocumentos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tarjetaDocumento {
+  display: block;
+  box-sizing: border-box;
+  width: 193px;
+  min-height: 148px;
+  border: 1px solid #b49da5;
+  background: #f4f4f4;
+  padding: 33px 6px 8px 6px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.tarjetaDocumento:hover {
+  background: #eceaea;
+  text-decoration: none;
+}
+
+.tarjetaDocumento .titulo {
+  display: block;
+  font-weight: normal;
+  color: #990033;
+  font-size: 9px;
+  line-height: 11px;
+  text-align: center;
+}
+
+.tarjetaDocumento .icono {
+  display: block;
+  margin: 3px auto 12px auto;
+  width: 36px;
+  height: 41px;
+  background: url('/eAConsultaWeb/resources/images/icono-documento.png') no-repeat center;
+  background-size: contain;
+}
+
+.tarjetaDocumento .csv {
+  display: block;
+  font-size: 8px;
+  color: #4a4a4a;
+  text-align: center;
+  word-break: break-all;
+  line-height: 1.35;
+}
+
+.sinResultados {
+  color: #c00040;
+  font-weight: bold;
+}
+
+/* --- Pie ----------------------------------------------------------- */
+
+#pie {
+  width: 100%;
+  border-collapse: collapse;
+  background: #e7e5e5;
+  flex-shrink: 0;
+}
+
+#pie td {
+  padding: 0;
+}
+
+#pie .franja {
+  height: 20px;
+  background: #e7e5e5 url('/eAConsultaWeb/resources/images/bgfooter3.gif') repeat-x top left;
+  vertical-align: bottom;
+  font-size: 10px;
+  padding-left: 4px;
+}
+
+#pie .franja a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: #990033;
+  text-decoration: none;
+}
+
+#pie .franja a:hover {
+  text-decoration: underline;
+}
+
+#pie .franja .sep {
+  color: #990033;
+  font-size: 10px;
+  padding: 0 4px;
+}
+
+#pie .textoLegal {
+  background: #e7e5e5;
+  border-bottom: 1px solid #000000;
+  vertical-align: top;
+  font-size: 10px;
+  line-height: 1.25;
+  padding: 2px 0 2px 4px;
+}
+
+#pie .celdaImagen {
+  width: 400px;
+  background: #e7e5e5;
+  border-bottom: 1px solid #000000;
+  vertical-align: top;
+  padding: 0;
+}
+
+#pie .celdaImagen img {
+  display: block;
+  width: 400px;
+  height: 35px;
+  border: 0;
+}
+
+/* --- Popup de ayuda ------------------------------------------------ */
+
+.velo {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 90px;
+  z-index: 50;
+}
+
+.ventana {
+  width: 500px;
+  max-width: 94vw;
+  background: #ffffff;
+  border: 1px solid #99011a;
+  border-top: 3px solid #99011a;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.ventana .barra {
+  background: #99011a url('/eAConsultaWeb/resources/images/bgtitulopopup.gif') repeat-x top left;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.ventana .barra button {
+  background: none;
+  border: 0;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 100%;
+  cursor: pointer;
+  padding: 0 3px;
+}
+
+.ventana .cuerpo {
+  padding: 12px 14px 10px 14px;
+  font-size: 100%;
+  line-height: 1.45;
+  color: #000000;
+}
+
+.ventana .cuerpo p {
+  padding: 0;
+  margin: 0 0 9px 0;
+}
+
+.ventana .acciones {
+  text-align: right;
+  padding: 0 14px 14px 14px;
+}

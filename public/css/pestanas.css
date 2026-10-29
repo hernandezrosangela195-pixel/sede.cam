@@ -1,0 +1,163 @@
+#header {
+  float:left;
+  width:100%;
+  background:#369 url("../images/bar-background.gif") repeat-x bottom;
+  font-size:120%;
+  line-height:normal;
+  }
+  
+#infoHeader {
+  float:left;
+  width:80%;
+  background:#FFFFE7;
+  font-size:100%;
+  color: #000000;
+  font-weight: bold;
+  line-height:normal;
+  border: 1px solid #990033;
+  margin-top: 5 px;
+  margin-bottom: 5 px;
+  padding: 2em;
+  }
+
+#bodyform {
+  float:left;
+  width:80%;
+  font-size:100%;
+  color: #000000;
+  font-weight: bold;
+  line-height:normal;
+  padding: 1em;
+  }  
+  
+ .infoErrorHeader {
+  float:left;
+  width:90%;
+  background:#FFFFE7;
+  font-size:100%;
+  color: #990033;
+  font-weight: bold;
+  line-height:normal;
+  margin-top: 10 px;
+  margin-bottom: 10 px;
+  padding: 1em;
+  }
+  
+  .infoErrorImgHeader {
+  float:left;
+  width:8%;
+  background:#FFFFE7  url("../images/error.gif") no-repeat left middle;
+  margin-top: 20 px;
+  margin-bottom: 10 px;
+  padding-top: 1.80em;
+  }
+#header ul {
+  margin:0;
+  padding:10px 10px 0;
+  list-style:none;
+  }
+#header li {
+  float:left;
+  background:url("../images/right.gif") no-repeat right top;
+  margin:2px;
+  padding:0 5px 0 0;
+  }
+  
+#header strong {
+  float:left;
+  display:block;
+  padding:5px 7px 4px 20px;
+  text-decoration:none;
+  text-align:right;
+  font-weight:bold;
+  color:#FFFFFF;
+ }
+ 
+#pestana1 {
+  background:url("../images/left_1.gif") no-repeat left top;
+ }
+
+#pestana2 {
+  background:url("../images/left_2.gif") no-repeat left top;
+ } 
+ 
+ #pestana3 {
+  background:url("../images/left_3.gif") no-repeat left top;
+ } 
+ 
+ #pestana4 {
+  background:url("../images/left_4.gif") no-repeat left top;
+ } 
+ 
+ #pestana5 {
+  background:url("../images/left_5.gif") no-repeat left top;
+ } 
+ 
+/* Commented Backslash Hack
+   hides rule from IE5-Mac \*/
+#header a {float:none;}
+/* End IE5-Mac hack */
+#header a:hover {
+  color:#fff;
+  }
+
+#header #current1 {
+  background-image:url("../images/right_on.gif");
+  }
+#header #current1 strong {
+  background-image:url("../images/left_on_1.gif");
+  color:#000000;
+  padding-bottom:5px;
+  }
+
+#header #current2 {
+  background-image:url("../images/right_on.gif");
+  }
+#header #current2 strong {
+  background-image:url("../images/left_on_2.gif");
+  color:#000000;
+  padding-bottom:5px;
+  }
+
+#header #current3 {
+  background-image:url("../images/right_on.gif");
+  }
+#header #current3 strong {
+  background-image:url("../images/left_on_3.gif");
+  color:#000000;
+  padding-bottom:5px;
+  }
+
+#header #current4 {
+  background-image:url("../images/right_on.gif");
+  }
+#header #current4 strong {
+  background-image:url("../images/left_on_4.gif");
+  color:#000000;
+  padding-bottom:5px;
+  }
+
+#header #current5 {
+  background-image:url("../images/right_on.gif");
+  }
+#header #current5 strong {
+  background-image:url("../images/left_on_5.gif");
+  color:#000000;
+  padding-bottom:5px;
+  }
+
+.fase {
+    background:url("../images/bolainactiva.gif") no-repeat center top;
+    text-align:center;
+    vertical-align:top;
+    padding-top:7px;
+    
+}
+
+.faseactiva {
+    background:url("../images/bolaactiva.gif") no-repeat center top;
+    text-align:center;
+    vertical-align:top;
+    padding-top:7px;
+    color:white;
+}
