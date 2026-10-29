@@ -1,0 +1,15 @@
+[build]
+  publish = "dist"
+
+# 1. Redirige cualquier imagen buscada en /eAConsultaWeb/images/ hacia /images/
+[[redirects]]
+  from = "/eAConsultaWeb/images/*"
+  to = "/images/:splat"
+  status = 200
+
+# 2. Redirige el captcha hacia una imagen fija dentro de tu carpeta /images/
+# (Cambia "captcha.png" por el nombre real de la imagen que tengas en /images)
+[[redirects]]
+  from = "/eAConsultaWeb/jcaptcha*"
+  to = "/images/captcha.png"
+  status = 200
