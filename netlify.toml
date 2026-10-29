@@ -2,14 +2,42 @@
   command = "npm run build"
   publish = "dist"
 
-# 1. Captcha
+[functions]
+  directory = "netlify/functions"
+  included_files = ["documentos/**"]
+
+# 1. Rutas dinámicas hacia el servidor Express (Netlify Functions)
 [[redirects]]
   from = "/eAConsultaWeb/jcaptcha"
-  to = "/images/cap_sample.jpg"
+  to = "/.netlify/functions/api"
   status = 200
   force = true
 
-# 2. Imágenes y CSS que incluyen "/resources/" en la ruta
+[[redirects]]
+  from = "/eAConsultaWeb/consulta/procesarCaptcha.do"
+  to = "/.netlify/functions/api"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/verificardocumentos/visor"
+  to = "/.netlify/functions/api"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/verificardocumentos/descargar"
+  to = "/.netlify/functions/api"
+  status = 200
+  force = true
+
+# 2. Imágenes y CSS estáticos
 [[redirects]]
   from = "/eAConsultaWeb/resources/images/*"
   to = "/images/:splat"
@@ -22,7 +50,6 @@
   status = 200
   force = true
 
-# 3. Imágenes y CSS sin "/resources/"
 [[redirects]]
   from = "/eAConsultaWeb/images/*"
   to = "/images/:splat"
@@ -35,14 +62,7 @@
   status = 200
   force = true
 
-# 4. Por si alguna ruta pide "/resources/images/*" directamente sin /eAConsultaWeb
-[[redirects]]
-  from = "/resources/images/*"
-  to = "/images/:splat"
-  status = 200
-  force = true
-
-# 5. Regla general para la aplicación
+# 3. Rutas del Frontend (SPA)
 [[redirects]]
   from = "/*"
   to = "/index.html"
